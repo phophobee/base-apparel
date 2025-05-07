@@ -27,14 +27,11 @@ body {
 .container {
     width: 70%;
     margin-bottom: 20px;
-}
-
-.card {
     display: flex;
     flex-direction: row;
     background: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
-    box-shadow: 10px 10px 16px rgba(0, 0, 0, 0.3);
 }
+
 
 .left-box {
     width: 40%;
@@ -137,6 +134,39 @@ input:focus {
     height: 100%;
     object-fit: cover;
 }
+
+@media (max-width: 768px) {
+    .container {
+      flex-direction: column-reverse;
+      padding: 0;
+    }
+  
+    .left-box, .right-box {
+      padding: 2rem;
+    }
+  
+    .hero-img {
+      width: 100%;
+      height: auto;
+    }
+  
+    h1 {
+      font-size: 2rem;
+      text-align: center;
+    }
+  
+    p {
+      text-align: center;
+    }
+  
+    form {
+      width: 100%;
+    }
+  
+    .form-group {
+      flex-direction: row;
+    }
+  }
 
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
